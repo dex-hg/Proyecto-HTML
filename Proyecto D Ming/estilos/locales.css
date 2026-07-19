@@ -1,0 +1,175 @@
+/* ============================================
+   CHAUFA D MING - LOCALES E HISTORIA
+   Se usa en: locales.html, historia.html
+   Contiene: Menú lateral, contenido principal,
+   tarjetas de locales, misión/visión
+   ============================================ */
+
+.titulo-pagina {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.titulo-pagina h1 {
+    color: #D35400;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Layout de 2 columnas: menú lateral + contenido */
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 5%;
+    flex: 1;
+}
+
+/* Menú lateral sticky (se queda fijo al hacer scroll) */
+.menu-lateral {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+    border: 1px solid #FDEBD0;
+}
+
+.menu-lateral h3 {
+    color: #D35400;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F5B041;
+}
+
+.menu-lateral ul {
+    list-style: none;
+}
+
+.menu-lateral ul li {
+    margin-bottom: 12px;
+}
+
+.menu-lateral ul li a {
+    display: block;
+    padding: 12px 15px;
+    color: #2C3E50;
+    border-radius: 10px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.menu-lateral ul li a:hover {
+    background-color: #FFF8E7;
+    color: #D35400;
+    transform: translateX(5px);
+}
+
+.menu-lateral ul li a.activo {
+    background-color: #D35400;
+    color: white;
+}
+
+/* Contenido principal */
+.contenido {
+    background: white;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #FDEBD0;
+}
+
+.contenido h1 {
+    color: #2C3E50;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    border-bottom: 3px solid #D35400;
+    padding-bottom: 15px;
+}
+
+/* ========== TARJETAS DE LOCALES ========== */
+.local-card {
+    background: #FFF8E7;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-left: 5px solid #E67E22;
+    transition: all 0.3s;
+}
+
+.local-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.local-card h2 {
+    color: #E67E22;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.local-card .direccion {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 12px;
+}
+
+.local-card .horario {
+    background: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: 1px solid #FDEBD0;
+}
+
+.local-card .horario b {
+    color: #D35400;
+}
+
+/* Zona de reparto */
+.zona-reparto {
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.zona-reparto h2 {
+    color: #F5B041;
+    margin-bottom: 15px;
+}
+
+.zona-reparto p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.tiempo-badge {
+    display: inline-block;
+    background: #E67E22;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .contenedor-principal {
+        grid-template-columns: 1fr;
+    }
+    .menu-lateral {
+        position: static;
+    }
+    .contenido {
+        padding: 25px 20px;
+    }
+}

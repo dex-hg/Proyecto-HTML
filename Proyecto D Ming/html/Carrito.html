@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Chaufa D Ming</title>
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <link rel="stylesheet" href="../estilos/carrito.css">
+</head>
+<body>
+    
+    <header class="barra-superior">
+        <div class="logo">
+            <a href="Principal.html"><img src="../recursos/logo.png" alt="Chaufa D Ming"></a>
+        </div>
+        <div class="buscador-container">
+            <input type="text" class="buscador" placeholder="🔍 Busca platillos...">
+        </div>
+        <nav class="nav-menu">
+            <a href="Principal.html">Inicio</a>
+            <span class="separador">|</span>
+            <a href="InicioSesion.html">Iniciar sesión</a>
+            <span class="separador">|</span>
+            <a href="Carta.html">Nuestros platos</a>
+            <span class="separador">|</span>
+            <a href="Carta-promociones.html">Promociones</a>
+            <span class="separador">|</span>
+            <a href="Carrito.html">🛒 Carrito</a>
+        </nav>
+    </header>
+    
+    <main class="main-content-carrito">
+        <h1 class="titulo-pagina">🛒 Tu Carrito</h1>
+        
+        <div class="carrito-container">
+            <div class="carrito-header">
+                <div>Artículo</div>
+                <div>Precio</div>
+                <div>Cantidad</div>
+                <div>Subtotal</div>
+                <div></div>
+            </div>
+            
+            <div class="carrito-item">
+                <div class="producto-info">
+                    <img src="../recursos/carta/chaufa_pollo.png" alt="Chaufa de Pollo">
+                    <div>
+                        <div class="nombre">Chaufa de Pollo</div>
+                        <div class="descripcion">Arroz chaufa con pollo</div>
+                    </div>
+                </div>
+                <div class="precio">S/ 18.00</div>
+                <div class="cantidad">
+                    <input type="number" value="1" min="1">
+                </div>
+                <div class="subtotal">S/ 18.00</div>
+                <div>
+                    <button class="btn-eliminar" title="Eliminar">🗑️</button>
+                </div>
+            </div>
+            
+            <div class="carrito-item">
+                <div class="producto-info">
+                    <img src="../recursos/carta/chaufa_especial.png" alt="Chaufa Especial">
+                    <div>
+                        <div class="nombre">Chaufa Especial</div>
+                        <div class="descripcion">Chaufa con carnes mixtas</div>
+                    </div>
+                </div>
+                <div class="precio">S/ 28.00</div>
+                <div class="cantidad">
+                    <input type="number" value="1" min="1">
+                </div>
+                <div class="subtotal">S/ 28.00</div>
+                <div>
+                    <button class="btn-eliminar" title="Eliminar">🗑️</button>
+                </div>
+            </div>
+            
+            <div class="carrito-total">
+                <div></div>
+                <div class="total-label">Total:</div>
+                <div class="total-precio">S/ 46.00</div>
+            </div>
+        </div>
+        
+        <div class="acciones">
+            <div>
+                <a href="Carta.html" class="btn-seguir">← Seguir comprando</a>
+                <button class="btn-vaciar" style="margin-left: 10px;">🗑️ Vaciar carrito</button>
+            </div>
+            <div class="resumen">
+                <h2>Total: <span class="total-final">S/ 46.00</span></h2>
+                <button class="btn-finalizar" onclick="alert('✅ ¡Listo! Su pedido llegará en 30 minutos')">🛵 Finalizar pedido</button>
+            </div>
+        </div>
+    </main>
+    
+    <section class="redes-sociales">
+        <h3>Síguenos en nuestras redes sociales:</h3>
+        <div class="redes-links">
+             <a href="https://www.Facebook.com" >
+                <img src="../recursos/Iconos/facebook.ico" alt="Facebook" ></a>
+            <a href="https://www.Instagram.com" >
+                <img src="../recursos/Iconos/instagram.ico" alt="Instagram" ></a>
+            <a href="https://www.Youtube.com" >
+                <img src="../recursos/Iconos/youtube.ico" alt="Youtube" ></a>
+            <a href="https://www.Twitter.com" >
+                <img src="../recursos/Iconos/twitter.ico" alt="twitter" ></a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div>
+            <h3>Contacto y Atención al Cliente</h3>
+            <p class="telefono">📞 9397954844 📞</p>
+            <p><a href="Libro-reclamaciones.html">📖 Libro de Reclamaciones 📖</a></p>
+        </div>
+        <div>
+            <h3>Sobre Nosotros</h3>
+            <ul>
+                <li><a href="Historia.html">Nuestra Historia</a></li>
+                <li><a href="Horario.html">Horarios y Locales</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <div class="copyright">
+        <p>© 2026 Chaufa D Ming - Todos los derechos reservados</p>
+    </div>
+    
+</body>
+</html>

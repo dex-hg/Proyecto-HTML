@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es"> <!--Idioma principal español-->
+<head>
+    <meta charset="UTF-8"> <!--cubre todos los simbolos del mundo para q no genere simbolos extraños -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!--El viewport controla la demostracion de la pagina en moviles y pantallas de diferentes tamaños-->
+    <!--witdth=device-width : adapta el ancho de la pagina al ancho de pantalla del dispositivo-->
+    <!--initial-scale= 1.0 establece el zoom inicial cuando se carga la imagen por primera vez-->
+    <title>Chaufa D Ming - El Mejor Chaufa</title>
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <link rel="stylesheet" href="../estilos/principal.css">
+
+</head>
+<body>
+    
+    <header class="barra-superior">
+        <div class="logo">
+            <a href="Principal.html"><img src="../recursos/logo.png" alt="Chaufa D Ming"></a>
+        </div>
+        <div class="buscador-container">
+            <input type="text" class="buscador" placeholder="🔍 Busca platillos...">
+        </div>
+        <nav class="nav-menu">
+            <a href="Principal.html">Inicio</a>
+            <span class="separador">|</span>
+            <a href="InicioSesion.html">Iniciar sesión</a>
+            <span class="separador">|</span>
+            <a href="Carta.html">Nuestros platos</a>
+            <span class="separador">|</span>
+            <a href="Carta-promociones.html">Promociones</a>
+            <span class="separador">|</span>
+            <a href="Carrito.html">🛒 Carrito</a>
+        </nav>
+    </header>
+    
+    <!--Carrusel De Banners -->
+
+    <div class="carrusel">
+        <div class="carrusel-imagenes">
+            <img src="../recursos/banner/banner1.jpg" alt="Banner 1">
+            <img src="../recursos/banner/banner2.jpg" alt="Banner 2">
+            <img src="../recursos/banner/banner3.jpg" alt="Banner 3">
+            <img src="../recursos/banner/banner4.jpg" alt="Banner 4">
+            <img src="../recursos/banner/banner5.jpg" alt="Banner 5">
+        </div>
+    </div>
+
+    
+    <section class="hero">
+        <h1>Chaufa D Ming</h1>
+        <h2>¡El Mejor Chaufa del Perú!</h2>
+        <p>Auténtico sabor Peruano-Chino que no puedes dejar de probar</p>
+        <button class="btn-carta" onclick="window.location.href='Carta.html'">📋 Explora nuestra carta 📋</button>
+    </section>
+    
+    <hr>
+    
+    <section class="seccion-platos">
+        <h2 style="text-align: center; color: #F54927; margin-bottom: 30px;">🍽️ Nuestros platos más pedidos 🍽️</h2>
+        <div class="seccion-header">
+            <h3>Arroz Chaufa</h3>
+            <a href="Carta.html" class="ver-todo">Ver todo →</a>
+        </div>
+        <div class="grid-platos">
+            <div class="plato-card">
+                <img src="https://tofuu.getjusto.com/orioneat-local/resized2/zZfrvEMePrzMmPLEv-300-x.webp" alt="Chaufa de Pollo">
+                <div class="info"><b>Chaufa de Pollo</b><span class="precio">S/ 18.00 soles</span></div>
+            </div>
+            <div class="plato-card">
+                <img src="https://tofuu.getjusto.com/orioneat-local/resized2/59A5pycH2EaPLHsPz-2400-x.webp" alt="Chaufa con Mariscos">
+                <div class="info"><b>Chaufa con Mariscos</b><span class="precio">S/ 25.00 soles</span></div>
+            </div>
+            <div class="plato-card">
+                <img src="https://tofuu.getjusto.com/orioneat-local/resized2/LCqKF9TwBbKTdbdM3-300-x.webp" alt="Chaufa Especial">
+                <div class="info"><b>Chaufa Especial</b><span class="precio">S/ 33.00 soles</span></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="seccion-platos">
+        <div class="seccion-header">
+            <h3>Asados</h3>
+            <a href="Carta.html" class="ver-todo">Ver todo →</a>
+        </div>
+        <div class="grid-platos">
+            <div class="plato-card">
+                <img src="https://delosi-pidelo.s3.amazonaws.com/madam-tusan/products/1-4-pato-asado-202603160506461101.webp" alt="Asado de Pato">
+                <div class="info"><b>Asado de Pato</b><span class="precio">S/ 18.00 soles</span></div>
+            </div>
+            <div class="plato-card">
+                <img src="https://delosi-pidelo.s3.amazonaws.com/madam-tusan/products/chanchito-asado-202603160506364817.webp" alt="Chancho Asado">
+                <div class="info"><b>Chancho Asado</b><span class="precio">S/ 25.00 soles</span></div>
+            </div>
+            <div class="plato-card">
+                <img src="https://delosi-pidelo.s3.amazonaws.com/madam-tusan/products/panceta-asada-202603160506522710.webp" alt="Panceta Asada">
+                <div class="info"><b>Panceta Asada</b><span class="precio">S/ 33.00 soles</span></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="seccion-platos">
+        <div class="seccion-header">
+            <h3>Explora nuestra carta</h3>
+            <a href="Carta.html" class="ver-todo">Ver todo →</a>
+        </div>
+        <div class="grid-platos">
+            <div class="plato-card">
+                <img src="https://tofuu.getjusto.com/orioneat-local/resized2/zZfrvEMePrzMmPLEv-300-x.webp" alt="Chaufa de Pollo">
+                <div class="info"><b>Chaufa de Pollo</b><span class="precio">S/ 18.00 soles</span></div>
+            </div>
+            <div class="plato-card">
+                <img src="https://delosi-pidelo.s3.amazonaws.com/madam-tusan/products/chanchito-asado-202603160506364817.webp" alt="Chancho Asado">
+                <div class="info"><b>Chancho Asado</b><span class="precio">S/ 25.00 soles</span></div>
+            </div>
+            <div class="plato-card">
+                <img src="https://tofuu.getjusto.com/orioneat-local/resized2/LCqKF9TwBbKTdbdM3-300-x.webp" alt="Chaufa Especial">
+                <div class="info"><b>Chaufa Especial</b><span class="precio">S/ 33.00 soles</span></div>
+            </div>
+        </div>
+    </section>
+    
+    <hr>
+    
+    <section class="redes-sociales">
+        <h3>Síguenos en nuestras redes sociales:</h3>
+        <div class="redes-links">
+            <a href="https://www.Facebook.com" >
+                <img src="../recursos/Iconos/facebook.ico" alt="Facebook"></a>
+            <a href="https://www.Instagram.com" >
+                <img src="../recursos/Iconos/instagram.ico" alt="Instagram"></a>
+            <a href="https://www.Youtube.com" >
+                <img src="../recursos/Iconos/youtube.ico" alt="Youtube"></a>
+            <a href="https://www.Twitter.com" >
+                <img src="../recursos/Iconos/twitter.ico" alt="twitter"></a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div>
+            <h3>Contacto y Atención al Cliente</h3>
+            <p class="telefono">📞 9397954844 📞</p>
+            <p><a href="Libro-reclamaciones.html">📖 Libro de Reclamaciones 📖</a></p>
+        </div>
+        <div>
+            <h3>Sobre Nosotros</h3>
+            <ul>
+                <li><a href="Historia.html">Nuestra Historia</a></li>
+                <li><a href="Horario.html">Horarios y Locales</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <div class="copyright">
+        <p>© 2026 Chaufa D Ming - Todos los derechos reservados</p>
+    </div>
+    
+</body>
+</html>
