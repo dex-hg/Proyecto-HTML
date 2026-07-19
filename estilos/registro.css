@@ -1,0 +1,115 @@
+/* ============================================
+   CHAUFA D MING - PÁGINA DE REGISTRO
+   Se usa en: registro.html
+   Contiene: Formulario de registro de usuarios
+   ============================================ */
+
+.main-content-registro {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.titulo-pagina {
+    text-align: center;
+    color: #D35400;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Caja blanca del formulario */
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #FDEBD0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #2C3E50;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: #FAFAFA;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #D35400;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(211, 84, 0, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #B0B0B0;
+}
+
+/* Checkbox de términos */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    padding: 15px;
+    background-color: #FFF8E7;
+    border-radius: 10px;
+    border: 1px solid #FDEBD0;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #D35400;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: #4A2C2A;
+    cursor: pointer;
+}
+
+/* Botón de registro */
+.btn-registrarse {
+    width: 100%;
+    background-color: #E67E22;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #D35400;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.btn-registrarse:hover {
+    background-color: #D35400;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(211, 84, 0, 0.3);
+}
