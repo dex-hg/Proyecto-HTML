@@ -242,3 +242,56 @@
         text-align: center;
     }
 }
+
+/* ========== ESTADOS DINÁMICOS DEL CARRITO ========== */
+.btn-vaciar {
+    margin-left: 10px;
+}
+
+.btn-finalizar:disabled,
+.btn-vaciar:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.nota-finalizacion {
+    max-width: 340px;
+    margin-top: 10px;
+    color: #777;
+    font-size: 0.88em;
+}
+
+.carrito-vacio {
+    padding: 55px 20px;
+    text-align: center;
+    color: #666;
+}
+
+.carrito-vacio span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 3.5em;
+}
+
+.carrito-vacio p {
+    margin-bottom: 14px;
+    font-size: 1.15em;
+}
+
+.carrito-vacio a {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 20px;
+    background-color: #D35400;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .btn-vaciar {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}

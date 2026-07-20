@@ -246,3 +246,59 @@ hr {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========== ELEMENTOS INTERACTIVOS DE JAVASCRIPT ========== */
+.nav-menu a[href="Carrito.html"] {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.contador-carrito {
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5B041;
+    color: #4A2C2A;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.contador-carrito[hidden] {
+    display: none;
+}
+
+.notificacion-carrito {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 2000;
+    max-width: min(360px, calc(100vw - 32px));
+    padding: 14px 20px;
+    border-radius: 12px;
+    background-color: #2C3E50;
+    color: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s;
+}
+
+.notificacion-carrito.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .notificacion-carrito {
+        right: 16px;
+        bottom: 16px;
+    }
+}
