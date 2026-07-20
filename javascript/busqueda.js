@@ -54,8 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
         let coincidencias = 0;
 
         platos.forEach((plato) => {
-            const contenido = normalizarTexto(plato.textContent);
-            const coincide = termino === "" || contenido.includes(termino);
+            const tituloPlato = plato.querySelector(".plato-info h3")?.textContent ?? "";
+            const tituloNormalizado = normalizarTexto(tituloPlato);
+            const coincide = termino === "" || tituloNormalizado.includes(termino);
             plato.hidden = !coincide;
 
             if (coincide) {
