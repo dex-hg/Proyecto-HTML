@@ -271,6 +271,12 @@
     display: none;
 }
 
+/* Evita que display:flex mantenga visibles los platos descartados. */
+.plato-item[hidden],
+.categoria-section[hidden] {
+    display: none;
+}
+
 .btn {
     border: none;
     cursor: pointer;
