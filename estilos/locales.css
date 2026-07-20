@@ -173,3 +173,23 @@
         padding: 25px 20px;
     }
 }
+
+/* ========== ESTADO DE APERTURA CALCULADO POR JAVASCRIPT ========== */
+.estado-local {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.estado-local.abierto {
+    background-color: #D5F5E3;
+    color: #196F3D;
+}
+
+.estado-local.cerrado {
+    background-color: #FADBD8;
+    color: #922B21;
+}
