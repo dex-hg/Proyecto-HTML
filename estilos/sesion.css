@@ -135,6 +135,32 @@
     box-shadow: 0 8px 20px rgba(230, 126, 34, 0.3);
 }
 
+.mensaje-sesion {
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.mensaje-sesion[hidden] {
+    display: none;
+}
+
+.mensaje-exito {
+    color: #155724;
+    background-color: #D4EDDA;
+    border-color: #C3E6CB;
+}
+
+.mensaje-error {
+    color: #721C24;
+    background-color: #F8D7DA;
+    border-color: #F5C6CB;
+}
+
 .beneficios {
     text-align: left;
     margin: 20px 0;
