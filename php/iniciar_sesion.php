@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/../configuracion/conexion.php';
+require_once __DIR__ . '/../configuracion/sesion.php';
 
 /**
  * Obtiene un campo de texto enviado por POST sin aceptar arreglos.
@@ -66,13 +67,7 @@ try {
         redirigirAlFormulario('credenciales_invalidas');
     }
 
-    session_set_cookie_params([
-        'httponly' => true,
-        'secure' => isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
-        'samesite' => 'Lax',
-        'path' => '/',
-    ]);
-    session_start();
+    iniciarSesionSegura();
     session_regenerate_id(true);
 
     $_SESSION['cliente'] = [
