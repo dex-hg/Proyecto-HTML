@@ -113,3 +113,28 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(211, 84, 0, 0.3);
 }
+
+.mensaje-registro {
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.mensaje-registro[hidden] {
+    display: none;
+}
+
+.mensaje-exito {
+    color: #155724;
+    background-color: #D4EDDA;
+    border-color: #C3E6CB;
+}
+
+.mensaje-error {
+    color: #721C24;
+    background-color: #F8D7DA;
+    border-color: #F5C6CB;
+}
