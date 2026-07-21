@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const actualizarContador = () => {
         const unidades = totalUnidades();
 
-        document.querySelectorAll('a[href="Carrito.html"]').forEach((enlace) => {
+        document.querySelectorAll('a[href$="carrito.html"]').forEach((enlace) => {
             let contador = enlace.querySelector(".contador-carrito");
 
             if (!contador) {
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (carrito.length === 0) {
             const mensaje = document.createElement("div");
             mensaje.className = "carrito-vacio";
-            mensaje.innerHTML = "<span>🥡</span><p>Tu carrito está vacío.</p><a href=\"Carta.html\">Explorar la carta</a>";
+            mensaje.innerHTML = "<span>🥡</span><p>Tu carrito está vacío.</p><a href=\"carta.html\">Explorar la carta</a>";
             listaCarrito.appendChild(mensaje);
         } else {
             carrito.forEach((producto) => {

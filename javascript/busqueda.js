@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .trim();
 
     const platos = Array.from(document.querySelectorAll(".plato-item"));
+    const destinoCarta = campoBusqueda.dataset.destinoCarta || "carta.html";
     campoBusqueda.type = "search";
     campoBusqueda.setAttribute("aria-label", "Buscar platos");
 
@@ -26,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
             evento.preventDefault();
             const termino = campoBusqueda.value.trim();
             const destino = termino
-                ? `Carta.html?buscar=${encodeURIComponent(termino)}`
-                : "Carta.html";
+                ? `${destinoCarta}?buscar=${encodeURIComponent(termino)}`
+                : destinoCarta;
 
             window.location.href = destino;
         });
