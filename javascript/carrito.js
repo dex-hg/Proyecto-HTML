@@ -61,6 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
         0
     );
 
+    const calcularMontoTotal = () => carrito.reduce(
+        (totalCentavos, producto) => (
+            totalCentavos + Math.round(producto.precio * 100) * producto.cantidad
+        ),
+        0
+    ) / 100;
+
     const actualizarContador = () => {
         const unidades = totalUnidades();
 
@@ -152,6 +159,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalPrecio = document.querySelector(".total-precio");
     const totalFinal = document.querySelector(".total-final");
     const botonVaciar = document.querySelector(".btn-vaciar");
+    const botonFinalizar = document.querySelector(".btn-finalizar");
+    const notaFinalizacion = document.querySelector(".nota-finalizacion");
+    let pedidoEnProceso = false;
 
     function crearItemCarrito(producto) {
         const item = document.createElement("div");
@@ -224,10 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        const total = carrito.reduce(
-            (acumulado, producto) => acumulado + producto.precio * producto.cantidad,
-            0
-        );
+        const total = calcularMontoTotal();
         const totalFormateado = formatoMoneda.format(total);
 
         if (totalPrecio) {
@@ -238,6 +245,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         if (botonVaciar) {
             botonVaciar.disabled = carrito.length === 0;
+        }
+        if (botonFinalizar) {
+            botonFinalizar.disabled = carrito.length === 0 || pedidoEnProceso;
         }
     }
 
@@ -298,6 +308,69 @@ document.addEventListener("DOMContentLoaded", () => {
         actualizarContador();
         renderizarCarrito();
         notificar("🗑️ El carrito se vació correctamente.");
+    });
+
+    botonFinalizar?.addEventListener("click", async () => {
+        if (carrito.length === 0 || pedidoEnProceso) {
+            return;
+        }
+
+        pedidoEnProceso = true;
+        botonFinalizar.textContent = "Registrando pedido...";
+        renderizarCarrito();
+
+        try {
+            const respuesta = await fetch("../php/registrar_pedido.php", {
+                method: "POST",
+                credentials: "same-origin",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    total_unidades: totalUnidades(),
+                    monto: calcularMontoTotal(),
+                }),
+            });
+            const resultado = await respuesta.json().catch(() => ({}));
+
+            if (respuesta.status === 401) {
+                const mensaje = resultado.error
+                    ?? "Debes iniciar sesión antes de finalizar el pedido.";
+                if (notaFinalizacion) {
+                    notaFinalizacion.textContent = mensaje;
+                }
+                notificar(`🔐 ${mensaje}`);
+                return;
+            }
+
+            if (!respuesta.ok) {
+                throw new Error(resultado.error ?? "No se pudo registrar el pedido.");
+            }
+
+            carrito = [];
+            guardarCarrito();
+            actualizarContador();
+
+            const mensajeExito = `Pedido #${resultado.id_pedido} registrado correctamente.`;
+            if (notaFinalizacion) {
+                notaFinalizacion.textContent = mensajeExito;
+            }
+            notificar(`✅ ${mensajeExito}`);
+        } catch (error) {
+            console.warn("No se pudo registrar el pedido.", error);
+            const mensaje = error instanceof Error
+                ? error.message
+                : "No se pudo registrar el pedido. Inténtalo nuevamente.";
+            if (notaFinalizacion) {
+                notaFinalizacion.textContent = mensaje;
+            }
+            notificar(`⚠️ ${mensaje}`);
+        } finally {
+            pedidoEnProceso = false;
+            botonFinalizar.textContent = "🛵 Finalizar pedido";
+            renderizarCarrito();
+        }
     });
 
     window.addEventListener("storage", (evento) => {
