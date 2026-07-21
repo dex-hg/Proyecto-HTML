@@ -4,6 +4,15 @@
    Contiene: Tarjetas de login y registro
    ============================================ */
 
+
+.titulo-pagina {
+    padding: 20px 0;
+    text-align: center;
+    color: #D35400;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
 .contenedor-login {
     display: grid;
     grid-template-columns: 1fr 1fr;
