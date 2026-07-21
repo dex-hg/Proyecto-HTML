@@ -125,6 +125,86 @@ hr {
     color: #F5B041;
 }
 
+.sesion-usuario {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.boton-usuario {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-usuario:hover,
+.boton-usuario[aria-expanded="true"] {
+    background-color: #D35400;
+    transform: translateY(-2px);
+}
+
+.boton-usuario:focus-visible,
+.boton-cerrar-sesion:focus-visible {
+    outline: 3px solid #F5B041;
+    outline-offset: 2px;
+}
+
+.menu-usuario {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 2100;
+    min-width: 190px;
+    padding: 10px;
+    border: 1px solid #FDEBD0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.22);
+}
+
+.menu-usuario[hidden] {
+    display: none;
+}
+
+.boton-cerrar-sesion {
+    width: 100%;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #C0392B;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-cerrar-sesion:hover {
+    background-color: #922B21;
+}
+
+.boton-cerrar-sesion:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.mensaje-cierre-sesion {
+    margin-top: 8px;
+    color: #721C24;
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+.mensaje-cierre-sesion[hidden] {
+    display: none;
+}
+
 /* ========== REDES SOCIALES ========== */
 /* Franja roja con iconos circulares.
    Flexbox: título a la izquierda, iconos a la derecha. */
@@ -235,6 +315,11 @@ hr {
     
     .nav-menu {
         justify-content: center;
+    }
+
+    .menu-usuario {
+        right: 50%;
+        transform: translateX(50%);
     }
     
     .redes-sociales {
