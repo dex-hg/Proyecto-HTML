@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".btn-carta")?.addEventListener("click", () => {
-        window.location.href = "Carta.html";
+        window.location.href = "html/carta.html";
     });
 
     const carrusel = document.querySelector(".carrusel");

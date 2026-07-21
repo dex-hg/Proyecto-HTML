@@ -248,7 +248,7 @@ hr {
 }
 
 /* ========== ELEMENTOS INTERACTIVOS DE JAVASCRIPT ========== */
-.nav-menu a[href="Carrito.html"] {
+.nav-menu a[href$="carrito.html"] {
     position: relative;
     display: inline-flex;
     align-items: center;
